@@ -14,6 +14,7 @@ const Routes = () => (
   <Switch>
     <Route exact path="/" component={lazyLoadedPage('Home')} />
     <Route exact path="/company/:id" component={lazyLoadedPage('Company')} />
+    <Route exact path="/company/:id/graphic" component={lazyLoadedPage('Graphic')} />
     <Route exact path="*" component={lazyLoadedPage('Home')} />
   </Switch>
 );

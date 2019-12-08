@@ -62,7 +62,10 @@ const API = {
       },
       headers: headers()
     });
-    return data;
+
+    const payload = clearObject(data['Time Series (5min)']);
+
+    return payload;
   }
 };
 

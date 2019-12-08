@@ -9,11 +9,6 @@ export const Container = styled.div`
     justify-content: space-between;
     align-items: center;
   }
-
-  > a {
-    color: ${({ theme }) => theme.fontPrimary};
-    text-decoration: underline;
-  }
 `;
 
 export const Cell = styled.div`

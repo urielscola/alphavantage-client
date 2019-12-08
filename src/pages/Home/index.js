@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Head from '../../components/Head';
 import Grid from '../../components/Grid';
 import List from '../../components/List';
+import Link from '../../components/Link';
 import Spacing from '../../components/Spacing';
 import Search from './partials/Search';
 import ResultItem from '../../components/ResultItem';
@@ -44,9 +45,14 @@ const Home = () => {
                       { name: 'Nome', value: card.name },
                       { name: 'Região', value: card.region }
                     ]}
-                    symbol={card.symbol}
-                  />
-                  <Spacing appearence="XLarge" />
+                  >
+                    <Link
+                      path={`/company/${card.symbol}`}
+                      title="Ver detalhes"
+                    />
+                  </ResultItem>
+
+                  <Spacing appearence="Medium" />
                 </List>
               );
             })}
