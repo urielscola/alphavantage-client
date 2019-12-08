@@ -12,7 +12,7 @@ import { truncate } from '../../helpers/strings';
 
 const Home = () => {
   const [cards, setCards] = useState([]);
-  const [hasResults, setHasResults] = useState(false);
+  const [hasResults, setHasResults] = useState(true);
   const { setLoading, setError } = useApplicationContext();
 
   const handleSearch = async keywords => {
