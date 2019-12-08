@@ -29,7 +29,7 @@ const Graphic = ({ match }) => {
   }, [fetchData]);
 
   return (
-    <>
+    <div data-testid="graphic">
       <Spacing appearence="XLarge" />
       <Head title={`${match.params.id} - Variação`} />
 
@@ -42,7 +42,7 @@ const Graphic = ({ match }) => {
         {!!plotData && <LineGraphic data={plotData} />}
       </Grid.Container>
       <Spacing appearence="XLarge" />
-    </>
+    </div>
   );
 };
 

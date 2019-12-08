@@ -2,7 +2,7 @@ import React from 'react';
 import { Container } from './styles';
 
 const Loader = () => (
-  <Container>
+  <Container data-testid="loader">
     <div>
       <div />
       <div />
@@ -17,5 +17,3 @@ const Loader = () => (
 );
 
 export default Loader;
-
-export { SmallLoader } from './styles';

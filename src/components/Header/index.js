@@ -5,7 +5,7 @@ import { Container } from './styles';
 
 export const Header = () => {
   return (
-    <Container>
+    <Container data-testid="header">
       <Grid.Container>
         <Logo />
       </Grid.Container>

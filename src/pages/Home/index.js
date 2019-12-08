@@ -22,14 +22,13 @@ const Home = () => {
       setCards(response);
       setHasResults(!!response.length);
     } catch (err) {
-      console.log(err);
       setError(true);
     }
     setLoading(false);
   };
 
   return (
-    <>
+    <div data-testid="home">
       <Spacing appearence="XLarge" />
       <Head title="Home" />
       <Grid.Container>
@@ -60,7 +59,7 @@ const Home = () => {
         {!hasResults && <p>Nenhum resultado.</p>}
         <Spacing appearence="Large" />
       </Grid.Container>
-    </>
+    </div>
   );
 };
 

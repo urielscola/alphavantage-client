@@ -11,7 +11,7 @@ const options = {
 
 const Spacing = ({ appearence }) => {
   const Component = options[appearence];
-  return <Component aria-hidden="true" />;
+  return <Component aria-hidden="true" data-testid="spacing" />;
 };
 
 export default Spacing;

@@ -11,7 +11,7 @@ const Picker = ({ label, minDate, maxDate, value = new Date(), onChange }) => {
   const handleChange = date => onChange(date);
 
   return (
-    <Container>
+    <Container data-testid="picker">
       {label}
       <DatePicker
         selected={value}

@@ -10,7 +10,7 @@ const ErrorModal = ({ history, setError }) => {
   };
 
   return (
-    <Container>
+    <Container data-testid="error-modal">
       <Box>
         <p>Ops! Parece que algo deu errado.</p>
         <p>Por favor, tente novamente.</p>

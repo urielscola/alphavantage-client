@@ -49,7 +49,7 @@ const LineChart = ({ data }) => {
     ]
   };
   return (
-    <div>
+    <div data-testid="linegraphic">
       <Line data={config} options={options} />
     </div>
   );

@@ -70,8 +70,11 @@
   "jest": {
     "collectCoverageFrom": [
       "src/components/*/*.js",
-      "src/helpers/*/*.js",
-      "src/pages/*/*.js"
+      "src/helpers/*.js",
+      "src/pages/*/*.js",
+      "!src/components/*/styles.js",
+      "!src/components/Grid/*.js",
+      "!src/components/ScrollToTop/*.js"
     ]
   }
 }

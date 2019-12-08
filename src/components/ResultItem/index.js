@@ -4,9 +4,9 @@ import Cell from './Cell';
 import { Container } from './styles';
 
 const ResultItem = ({ cells, symbol, children }) => (
-  <Container key={symbol}>
+  <Container key={symbol} data-testid="result-item">
     <Spacing appearence="Large" />
-    <div>
+    <div data-testid="result-item-cells">
       {!!cells &&
         cells.map((cell, index) => (
           <Cell key={cell.value + index} name={cell.name} value={cell.value} />

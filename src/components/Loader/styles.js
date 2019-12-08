@@ -108,14 +108,3 @@ export const Container = styled.div`
     }
   }
 `;
-
-export const SmallLoader = styled.span`
-  border: 1px solid ${({ theme }) => theme.white};
-  border-top: 1px solid ${({ theme }) => theme.white};
-  border-radius: 50%;
-  width: ${({ size }) => size || '25px'};
-  height: ${({ size }) => size || '25px'};
-  display: block;
-  margin: auto;
-  animation: ${rotate} 1s linear infinite;
-`;

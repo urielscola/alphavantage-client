@@ -13,7 +13,7 @@ const InputField = ({
   ...props
 }) => {
   return (
-    <Container>
+    <Container data-testid="input-field">
       <Label htmlFor={name}>{label}</Label>
       <Input
         value={value}

@@ -44,7 +44,7 @@ const Company = ({ match }) => {
   }, [fetchData]);
 
   return (
-    <>
+    <div data-testid="company">
       <Spacing appearence="XLarge" />
       <Head title={match.params.id} />
 
@@ -89,7 +89,7 @@ const Company = ({ match }) => {
 
         <Spacing appearence="Large" />
       </Grid.Container>
-    </>
+    </div>
   );
 };
 
