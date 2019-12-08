@@ -10,8 +10,8 @@ import ScrollToTop from './components/ScrollToTop';
 const App = () => {
   return (
     <ThemeProvider theme={theme}>
-      <ApplicationProvider>
-        <BrowserRouter>
+      <BrowserRouter>
+        <ApplicationProvider>
           <>
             <GlobalStyles />
             <Header />
@@ -20,8 +20,8 @@ const App = () => {
             </main>
             <ScrollToTop />
           </>
-        </BrowserRouter>
-      </ApplicationProvider>
+        </ApplicationProvider>
+      </BrowserRouter>
     </ThemeProvider>
   );
 };

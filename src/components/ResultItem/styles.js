@@ -2,6 +2,7 @@ import styled from 'styled-components/macro';
 
 export const Container = styled.div`
   padding: 0 25px;
+  background-color: ${({ theme }) => theme.white};
 
   > div {
     display: flex;

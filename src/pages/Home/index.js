@@ -8,6 +8,7 @@ import Search from './partials/Search';
 import ResultItem from '../../components/ResultItem';
 import { useApplicationContext } from '../../contexts/application';
 import { ALPHA_VILLAGE_API } from '../../services';
+import { truncate } from '../../helpers/strings';
 
 const Home = () => {
   const [cards, setCards] = useState([]);
@@ -21,6 +22,7 @@ const Home = () => {
       setCards(response);
       setHasResults(!!response.length);
     } catch (err) {
+      console.log(err);
       setError(true);
     }
     setLoading(false);
@@ -39,17 +41,13 @@ const Home = () => {
             {cards.map(card => {
               return (
                 <List label={card.symbol} key={card.symbol}>
-                  <Spacing appearence="Small" />
                   <ResultItem
                     cells={[
-                      { name: 'Nome', value: card.name },
+                      { name: 'Nome', value: truncate(card.name, 50) },
                       { name: 'Região', value: card.region }
                     ]}
                   >
-                    <Link
-                      path={`/company/${card.symbol}`}
-                      title="Ver detalhes"
-                    />
+                    <Link path={`/company/${card.symbol}`}>Ver detalhes</Link>
                   </ResultItem>
 
                   <Spacing appearence="Medium" />

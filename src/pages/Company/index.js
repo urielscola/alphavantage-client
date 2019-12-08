@@ -49,7 +49,7 @@ const Company = ({ match }) => {
       <Head title={match.params.id} />
 
       <Grid.Container>
-        <Link path="/" title="Voltar" />
+        <Link path="/">Voltar</Link>
         <Spacing appearence="Medium" />
 
         <h2>{match.params.id}</h2>
@@ -67,21 +67,24 @@ const Company = ({ match }) => {
         )}
 
         {filteredCompany.map(item => (
-          <List label={item.formattedDate} key={item.formattedDate}>
+          <div key={item.formattedDate}>
+            <Link path={`/company/${match.params.id}/graphic`}>
+              <List label={item.formattedDate}>
+                <ResultItem
+                  cells={[
+                    {
+                      name: 'Abertura',
+                      value: formatMoney(item.open)
+                    },
+                    { name: 'Máxima', value: formatMoney(item.high) },
+                    { name: 'Mínima', value: formatMoney(item.high) },
+                    { name: 'Fechamento', value: formatMoney(item.close) }
+                  ]}
+                />
+              </List>
+            </Link>
             <Spacing appearence="Medium" />
-            <ResultItem
-              cells={[
-                {
-                  name: 'Abertura',
-                  value: formatMoney(item.open)
-                },
-                { name: 'Máxima', value: formatMoney(item.high) },
-                { name: 'Mínima', value: formatMoney(item.high) },
-                { name: 'Fechamento', value: formatMoney(item.close) }
-              ]}
-            />
-            <Spacing appearence="Large" />
-          </List>
+          </div>
         ))}
 
         <Spacing appearence="Large" />

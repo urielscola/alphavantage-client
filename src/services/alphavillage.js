@@ -8,6 +8,13 @@ const clearObject = payload => {
   return JSON.parse(JSON.stringify(payload).replace(/[0-9. ](?=\D+":)/g, ''));
 };
 
+instance.interceptors.response.use(response => {
+  if (response.status === 200 && !!response.data['Error Message']) {
+    throw new Error();
+  }
+  return response;
+});
+
 const API = {
   getSymbols: async ({ keywords }) => {
     const { data } = await instance({

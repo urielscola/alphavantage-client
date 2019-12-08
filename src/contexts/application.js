@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState } from 'react';
 import Loader from '../components/Loader';
-// import ErrorModal from "../components/ErrorModal";
+import ErrorModal from '../components/ErrorModal';
 
 const ApplicationContext = createContext({});
 const useApplicationContext = () => useContext(ApplicationContext);
@@ -13,7 +13,7 @@ const ApplicationProvider = ({ children }) => {
   return (
     <ApplicationContext.Provider value={value}>
       {loading && <Loader />}
-      {/* {error && <ErrorModal title="Erro ao comunicar com o sistema" />} */}
+      {error && <ErrorModal setError={setError} />}
       {children}
     </ApplicationContext.Provider>
   );

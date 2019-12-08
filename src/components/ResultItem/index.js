@@ -5,6 +5,7 @@ import { Container } from './styles';
 
 const ResultItem = ({ cells, symbol, children }) => (
   <Container key={symbol}>
+    <Spacing appearence="Large" />
     <div>
       {!!cells &&
         cells.map((cell, index) => (
@@ -17,7 +18,7 @@ const ResultItem = ({ cells, symbol, children }) => (
         {children}
       </>
     )}
-    <Spacing appearence="Small" />
+    <Spacing appearence="Large" />
   </Container>
 );
 

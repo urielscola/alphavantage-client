@@ -18,7 +18,6 @@ const Graphic = ({ match }) => {
         symbol: match.params.id
       });
       setPlotData(response);
-      console.log(response);
     } catch (err) {
       setError(true);
     }
@@ -35,8 +34,9 @@ const Graphic = ({ match }) => {
       <Head title={`${match.params.id} - Variação`} />
 
       <Grid.Container>
-        <Link path={`/company/${match.params.id}`} title="Voltar" />
+        <Link path={`/company/${match.params.id}`}>Voltar</Link>
         <Spacing appearence="Medium" />
+
         <h2>{match.params.id} - Variação</h2>
         <Spacing appearence="Large" />
         {!!plotData && <LineGraphic data={plotData} />}
