@@ -10,8 +10,36 @@ import { useApplicationContext } from '../../contexts/application';
 import { ALPHA_VILLAGE_API } from '../../services';
 import { truncate } from '../../helpers/strings';
 
+const initialPayload = [
+  {
+    symbol: 'MSFT',
+    name: 'Microsoft Corporation',
+    region: 'United States'
+  },
+  {
+    symbol: 'AAPL',
+    name: 'Apple Inc',
+    region: 'United States'
+  },
+  {
+    symbol: 'MGLU3.SAO',
+    name: 'Magazine Luiza S.A.',
+    region: 'Brazil/Sao Paolo'
+  },
+  {
+    symbol: 'ITUB',
+    name: 'Itau Unibanco Holding S.A.',
+    region: 'Brazil/Sao Paolo'
+  },
+  {
+    symbol: 'BRDT3.SAO',
+    name: 'Petrobras Distribuidora S.A.',
+    region: 'Brazil/Sao Paolo'
+  }
+];
+
 const Home = () => {
-  const [cards, setCards] = useState([]);
+  const [cards, setCards] = useState(initialPayload);
   const [hasResults, setHasResults] = useState(true);
   const { setLoading, setError } = useApplicationContext();
 

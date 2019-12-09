@@ -1,5 +1,6 @@
 import React from 'react';
 import { render, waitForDomChange } from '@testing-library/react';
+import { BrowserRouter } from 'react-router-dom';
 
 import Home from '../../pages/Home';
 import ALPHA_VILLAGE_API from '../../services/alphavillage';
@@ -17,7 +18,11 @@ describe('Home page', () => {
   });
 
   it('Should render the page correctly with given params', async () => {
-    const { getByTestId } = render(<Home />);
+    const { getByTestId } = render(
+      <BrowserRouter>
+        <Home />
+      </BrowserRouter>
+    );
 
     await waitForDomChange();
 
